@@ -75,3 +75,71 @@ accion(e(X,Y,0), e(X,Y,r), 'apilar bloque rojo'):- X\=r, Y\=r.
 ```
 
 ## Prueba de escritorio
+
+```
+abierta   = (r,v,0)
+nodo      = (r,v,0)
+sucesores = (r,0,0) (r,v,a)
+---------------------------------------------------
+abierta   = (r,0,0) (r,v,a)
+nodo      = (r,0,0)
+sucesores = (0,0,0) (r,a,0)
+---------------------------------------------------
+abierta   = (r,v,a) (0,0,0) (r,a,0)
+nodo      = (r,v,a)
+sucesores = no tiene uno valido
+---------------------------------------------------
+abierta   = (0,0,0) (r,a,0)
+nodo      = (0,0,0)
+sucesores = (v,0,0) (a,0,0)
+---------------------------------------------------
+abierta   = (r,a,0) (v,0,0) (a,0,0)
+nodo      = (r,a,0)
+sucesores = (r,a,v)
+---------------------------------------------------
+abierta   = (v,0,0) (a,0,0) (r,a,v)
+nodo      = (v,0,0)
+sucesores = (v,a,0) (v,r,0)
+---------------------------------------------------
+abierta   = (a,0,0) (r,a,v) (v,a,0) (v,r,0)
+nodo      = (a,0,0)
+sucesores = (a,v,0) (a,r,0)
+---------------------------------------------------
+abierta   = (r,a,v) (v,a,0) (v,r,0) (a,v,0) (a,r,0)
+nodo      = (r,a,v)
+sucesores = no tiene uno valido
+---------------------------------------------------
+abierta   = (v,a,0) (v,r,0) (a,v,0) (a,r,0)
+nodo      = (v,a,0)
+sucesores = (v,a,r)
+---------------------------------------------------
+abierta   = (v,r,0) (a,v,0) (a,r,0) (v,a,r)
+nodo      = (v,r,0)
+sucesores = (v,r,a)
+---------------------------------------------------
+abierta   = (a,v,0) (a,r,0) (v,a,r) (v,r,a)
+nodo      = (a,v,0) 
+sucesores = (a,v,r) 
+---------------------------------------------------
+abierta   = (a,r,0) (v,a,r) (v,r,a) (a,v,r) 
+nodo      = (a,r,0)
+sucesores = (a,r,v)
+---------------------------------------------------
+abierta   = (v,a,r) (v,r,a) (a,v,r) (a,r,v)
+nodo      = (v,a,r) es meta!
+```
+
+### Solución
+
+-  **Estado Inicial :** (r,v,0)
+-  **Estado Objetivo :** (v,a,r)
+
+```
+N°   Acción            Nuevo Estado
+---------------------------------
+1.   Quitar verde    : (r,0,0)
+2.   Quitar rojo     : (0,0,0)
+3.   Apilar verde    : (v,0,0)
+4.   Apilar amarillo : (v,a,0)
+5.   Apilar rojo     : (v,a,r)
+```
