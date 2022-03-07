@@ -28,7 +28,7 @@ Las acciones que se pueden aplicar sobre una pila son las de **apilar** y **desa
 
 El siguiente código esta escrito utilizando el lenguaje Prolog.
 
-```
+```prolog
 solucion(A):- sgte(e(r,v,0), [e(r,v,0)], V , [], A).
 
 sgte(e(v,a,r),V,V,A,A).
