@@ -2,6 +2,8 @@
 
 ## Situaciones
 
+![Situacion Inicial y Final de los bloques](img/mundobloques.png)
+
 ## Formalización
 
 ### Formalización de los estados
