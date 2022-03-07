@@ -136,7 +136,7 @@ nodo      = (v,a,r) es meta/objetivo !
 
 ```
 N°   Acción            Nuevo Estado
----------------------------------
+-----------------------------------
 1.   Quitar verde    : (r,0,0)
 2.   Quitar rojo     : (0,0,0)
 3.   Apilar verde    : (v,0,0)
