@@ -87,7 +87,7 @@ sucesores = (0,0,0) (r,a,0)
 ---------------------------------------------------
 abierta   = (r,v,a) (0,0,0) (r,a,0)
 nodo      = (r,v,a)
-sucesores = no tiene uno valido
+sucesores = no tiene uno válido
 ---------------------------------------------------
 abierta   = (0,0,0) (r,a,0)
 nodo      = (0,0,0)
@@ -107,7 +107,7 @@ sucesores = (a,v,0) (a,r,0)
 ---------------------------------------------------
 abierta   = (r,a,v) (v,a,0) (v,r,0) (a,v,0) (a,r,0)
 nodo      = (r,a,v)
-sucesores = no tiene uno valido
+sucesores = no tiene uno válido
 ---------------------------------------------------
 abierta   = (v,a,0) (v,r,0) (a,v,0) (a,r,0)
 nodo      = (v,a,0)
@@ -126,7 +126,7 @@ nodo      = (a,r,0)
 sucesores = (a,r,v)
 ---------------------------------------------------
 abierta   = (v,a,r) (v,r,a) (a,v,r) (a,r,v)
-nodo      = (v,a,r) es meta!
+nodo      = (v,a,r) es meta/objetivo !
 ```
 
 ### Solución
