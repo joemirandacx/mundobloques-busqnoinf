@@ -6,13 +6,13 @@
 
 ## Formalización
 
-Los cubos **verde**, **amarillo** y **rojo** serán representados con las letras **v**, **a** y **r** respectivamente.
+Los bloques **verde**, **amarillo** y **rojo** serán representados con las letras **v**, **a** y **r** respectivamente.
 
-El objetivo puede ser descrito como el estado de una pila ~~ubicado en la columna central~~.
+El objetivo puede ser descrito como el estado de una pila ~~ubicada en la columna central~~.
 
-La estructura que soporta el estado de la pila consta de **3** parametros. Cada parametro puede tomar uno de los siguientes valores:
-- **0** para indicar que no tiene un cubo.
-- **v**, **a** ó **r** para indicar el color del cubo.
+La estructura que soporta el estado de la pila consta de **3** parámetros. Cada parametro puede tomar uno de los siguientes valores:
+- **0** para indicar que no tiene un bloque.
+- **v**, **a** ó **r** para indicar el color del bloque.
 
 ### Formalización de los estados
 
@@ -22,7 +22,7 @@ La estructura que soporta el estado de la pila consta de **3** parametros. Cada 
 
 ### Formalización de las acciones
 
-Las acciones que se pueden aplicar sobre una pila son las de **apilar** y **desapilar**/**quitar** un elemento. Sin enmbargo, para este caso es necesario diferenciar el **color** del elemento y el **tamaño** de la pila. Entonces tendremos un total de **18** posibles acciones.
+Las acciones que se pueden aplicar sobre una pila son las de **apilar** y **desapilar**/**quitar** un bloque. Sin enmbargo, para este caso es necesario diferenciar el **color** del bloque y el **tamaño** de la pila. Entonces tendremos un total de **18** posibles acciones.
 
 ## Implementación
 
