@@ -25,7 +25,7 @@ on:
           - feature/mets
         default: feature/mets
   schedule:
-    - cron: '*/30 * * * *'  # Ejecuta cada 30 minutos en UTC para pruebas
+    - cron: '0 18 * * *'  # Ejecuta a las 18 utc, 13 hora peru
 
 jobs:
   test:
