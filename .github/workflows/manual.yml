@@ -1,0 +1,39 @@
+name: Run Appium Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      TAGS:
+        description: 'Tags de los casos de prueba (p.ej., @CP001, @CP002)'
+        required: true
+        type: string
+        default: '@CP001'
+      TEST_ENVIRONMENT:
+        description: 'Entorno sobre el que se ejecutarán las pruebas'
+        required: true
+        type: choice
+        options:
+          - Preproduction
+          - Production
+        default: Preproduction
+      BRANCH:
+        description: 'Branch del repositorio de casos de prueba (p.ej., main, feature/mets)'
+        required: true
+        type: choice
+        options:
+          - feature/template
+          - feature/mets
+        default: feature/mets
+  schedule:
+    - cron: '*/5 * * * *'  # Ejecuta cada 5 minutos en UTC para pruebas
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar hora UTC
+        run: |
+          echo "Hora actual (UTC): $(date -u)"
+          echo "Hora actual (local): $(date)"
+          echo "Zona horaria del sistema:"
+          timedatectl | grep "Time zone"
